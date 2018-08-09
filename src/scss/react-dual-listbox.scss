@@ -59,6 +59,10 @@ $rdl-line-height: 1.428571429 !default;
 }
 
 .rdl-control-label {
+  position: relative;
+}
+
+.hidden {
   position: absolute;
   clip: rect(0 0 0 0);
 }

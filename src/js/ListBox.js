@@ -72,7 +72,7 @@ class ListBox extends React.Component {
 
         return (
             <div className="rdl-filter-container">
-                <label className="rdl-control-label" htmlFor={`${id}-filter-${controlKey}`}>
+                <label className="rdl-control-label hidden" htmlFor={`${id}-filter-${controlKey}`}>
                     Filter {displayName}
                 </label>
                 <input
@@ -107,7 +107,7 @@ class ListBox extends React.Component {
 
         return (
             <div className="rdl-control-container">
-                <label className="rdl-control-label" htmlFor={`${id}-${controlKey}`}>
+                <label className="rdl-control-label hidden" htmlFor={`${id}-${controlKey}`}>
                     {displayName}
                 </label>
                 <select
@@ -128,10 +128,11 @@ class ListBox extends React.Component {
     }
 
     render() {
-        const { actions, controlKey } = this.props;
+        const { actions, controlKey, displayName } = this.props;
 
         return (
             <div className={`rdl-listbox rdl-${controlKey}`}>
+                <div className="rdl-listbox-label">{displayName}</div>
                 {this.renderFilter()}
                 {actions}
                 {this.renderSelect()}
