@@ -12,6 +12,7 @@
     }
   },
   "rules": {
+    "linebreak-style": ["error", "windows"],
     "jsx-a11y/label-has-for": ["error", {
       "components": ["label"],
       "required": {
